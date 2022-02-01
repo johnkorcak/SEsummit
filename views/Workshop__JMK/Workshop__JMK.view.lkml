@@ -19,12 +19,6 @@ view: Workshop_JMK {
         sql: ${TABLE}.`Style`;;
     }
 
-    dimension: Weight_Hierarchy_Weight_Level {
-        label: "Weight Level"
-        type: string
-        sql: ${TABLE}.`Weight Level`;;
-    }
-
     dimension: d_gender {
         label: "Gender"
         group_label: "Customer Attributes"
@@ -207,6 +201,20 @@ view: Workshop_JMK {
         type: date_year
         sql: ${TABLE}.`Ship Year1a`;;
         drill_fields: [Date_YWD_Ship_Week]
+    }
+
+    dimension: Customer_test_Hierarchy_Customer_test_Level {
+        label: "Customer test Level"
+        group_label: "customer test"
+        type: string
+        sql: ${TABLE}.`Customer test Level`;;
+    }
+
+    dimension: d_datefirstpurchase {
+        label: "Date First Purchase"
+        group_label: "customer test"
+        type: string
+        sql: ${TABLE}.`d_datefirstpurchase`;;
     }
 
 
